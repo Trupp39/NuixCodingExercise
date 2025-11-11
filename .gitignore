@@ -1,0 +1,93 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.log
+*.pdb
+*.pidb
+*.vshost.*
+*.testsettings
+*.trx
+*.webtest
+*.cache
+*.obj
+*.bak
+*.resharper
+*.dotSettings
+*.resharper.user
+*.resharper.host
+*.csproj.user
+*.vcxproj.user
+*.sln.docstates
+*.suo
+*.user
+*.userprefs
+*.log
+*.pdb
+*.pidb
+*.vshost.*
+*.testsettings
+*.trx
+*.webtest
+*.cache
+*.obj
+*.bak
+*.resharper
+*.dotSettings
+*.resharper.user
+*.resharper.host
+*.csproj.user
+*.vcxproj.user
+*.sln.docstates
+
+# Build artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.exe
+*.exp
+*.lib
+*.ilk
+*.idb
+*.winmd
+*.appx
+*.msi
+*.msp
+*.pri
+*.sgen
+*.xap
+*.zip
+*.nupkg
+*.publish
+*.deploy
+_PublishedWebsites/
+app.publish/
+TestResults/
+
+# NuGet packages
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Node.js (if used for front-end or build tools)
+node_modules/
+npm-debug.log
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Environment-specific files
+appsettings.*.json # Exclude sensitive appsettings files, but keep appsettings.json
+*.json.user
+*.env
+.env.*
+
+# Miscellaneous
+Thumbs.db
+Desktop.ini
