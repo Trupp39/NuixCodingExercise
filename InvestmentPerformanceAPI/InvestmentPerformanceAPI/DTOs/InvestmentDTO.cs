@@ -12,6 +12,7 @@ namespace InvestmentPerformanceAPI.DTOs
         public decimal CurrentPrice { get; set; }
         public string? Term { get; set; }
         public decimal TotalGains { get; set; }
+        public decimal NumberOfShares { get; set; }
 
     }
 }

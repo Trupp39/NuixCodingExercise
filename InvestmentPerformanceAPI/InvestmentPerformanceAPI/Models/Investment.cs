@@ -11,5 +11,6 @@ namespace InvestmentPerformanceAPI.Models
         public decimal CurrentPrice { get; set; }
         public TermEnum Term { get; set; }
         public decimal TotalGains { get; set; }
+        public decimal NumberOfShares { get; set; }
     }
 }

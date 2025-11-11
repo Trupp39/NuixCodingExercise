@@ -41,7 +41,7 @@ namespace InvestmentPerformanceAPI.Services
             _logger.LogInformation("UserInvestmentService - GetUserInvestmentDetails");
             var investment = await _context.Users
                 .Where(user => user.Id == userId)
-                .Select(user => user.Investments.Where(i => i.Id == investmentId).First())
+                .Select(user => user.Investments.Where(i => i.Id == investmentId).FirstOrDefault())
                 .FirstOrDefaultAsync();
 
             _logger.LogInformation("UserInvestmentService - GetUserInvestmentDetails - Database Call Succesfull");
@@ -61,6 +61,7 @@ namespace InvestmentPerformanceAPI.Services
                     CurrentValue = investment.CurrentValue,
                     Term = investment.Term.ToString(),
                     TotalGains = investment.TotalGains,
+                    NumberOfShares = investment.NumberOfShares,
                 };
             }
 
