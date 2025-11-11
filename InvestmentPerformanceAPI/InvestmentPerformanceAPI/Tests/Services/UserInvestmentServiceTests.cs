@@ -55,11 +55,11 @@ namespace InvestmentPerformanceAPI.Tests.Services
         }
 
         [Test]
-        public async Task GetUserInvestments_ReturnsEmpty_WhenUserDoesNotExist()
+        public async Task GetUserInvestments_ReturnsNull_WhenUserDoesNotExist()
         {
             var result = await _service.GetUserInvestments(4);
 
-            Assert.That(result, Is.Empty);
+            Assert.That(result, Is.Null);
         }
 
         [Test]

@@ -25,7 +25,7 @@ namespace InvestmentPerformanceAPI.Services
 
             if (investments == null)
             {
-                return new List<UserInvestmentDTO>();
+                return null;
             }
 
             return investments.Select(i => new UserInvestmentDTO
