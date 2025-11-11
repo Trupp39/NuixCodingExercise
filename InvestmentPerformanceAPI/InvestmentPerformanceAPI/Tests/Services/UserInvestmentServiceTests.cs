@@ -13,7 +13,7 @@ namespace InvestmentPerformanceAPI.Tests.Services
         private UserInvestmentService _service;
         private Logger<UserInvestmentServiceTests> _logger;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             var options = new DbContextOptionsBuilder<AppDbContext>()
