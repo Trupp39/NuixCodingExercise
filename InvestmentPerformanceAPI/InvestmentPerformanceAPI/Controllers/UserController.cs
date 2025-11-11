@@ -18,6 +18,7 @@ namespace InvestmentPerformanceAPI.Controllers
             _userInvestmentService = userInvestmentService;
         }
 
+        //get endpoint exposing a given users investments
         [HttpGet("{userId}/investments")]
         public async Task<IActionResult> GetUserInvestments(int userId)
         {
@@ -33,6 +34,7 @@ namespace InvestmentPerformanceAPI.Controllers
             return Ok(investments);
         }
 
+        //get endpoint exposing a users certain investment details
         [HttpGet("{userId}/investments/{investmentId}")]
         public async Task<IActionResult> GetUserInvestments(int userId, int investmentId)
         {

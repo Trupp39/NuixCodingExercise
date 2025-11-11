@@ -9,9 +9,8 @@ namespace InvestmentPerformanceAPI.Tests.Services
 {
     public class UserInvestmentServiceTests
     {
-        private AppDbContext _context;
-        private UserInvestmentService _service;
-        private Logger<UserInvestmentServiceTests> _logger;
+        public required AppDbContext _context;
+        public required UserInvestmentService _service;
 
         [OneTimeSetUp]
         public void Setup()
@@ -48,10 +47,10 @@ namespace InvestmentPerformanceAPI.Tests.Services
             var result = await _service.GetUserInvestments(1);
 
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Count, Is.EqualTo(3));
-            Assert.That(result[0].InvestmentName, Is.EqualTo("QQQ"));
-            Assert.That(result[1].InvestmentName, Is.EqualTo("SPY"));
-            Assert.That(result[1].InvestmentId, Is.EqualTo(2));
+            Assert.That(result?.Count, Is.EqualTo(3));
+            Assert.That(result?[0].InvestmentName, Is.EqualTo("QQQ"));
+            Assert.That(result?[1].InvestmentName, Is.EqualTo("SPY"));
+            Assert.That(result?[1].InvestmentId, Is.EqualTo(2));
         }
 
         [Test]
@@ -68,12 +67,12 @@ namespace InvestmentPerformanceAPI.Tests.Services
             var result = await _service.GetUserInvestmentDetails(1,3);
 
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Id, Is.EqualTo(3));
-            Assert.That(result.CurrentValue, Is.EqualTo(270));
-            Assert.That(result.CostBasisPerShare, Is.EqualTo(60));
-            Assert.That(result.CurrentPrice, Is.EqualTo(90));
-            Assert.That(result.Term, Is.EqualTo(TermEnum.Long.ToString()));
-            Assert.That(result.TotalGains, Is.EqualTo(90));
+            Assert.That(result?.Id, Is.EqualTo(3));
+            Assert.That(result?.CurrentValue, Is.EqualTo(270));
+            Assert.That(result?.CostBasisPerShare, Is.EqualTo(60));
+            Assert.That(result?.CurrentPrice, Is.EqualTo(90));
+            Assert.That(result?.Term, Is.EqualTo(TermEnum.Long.ToString()));
+            Assert.That(result?.TotalGains, Is.EqualTo(90));
         }
 
         [Test]

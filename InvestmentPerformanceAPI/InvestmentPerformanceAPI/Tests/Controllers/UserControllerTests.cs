@@ -11,9 +11,9 @@ namespace InvestmentPerformanceAPI.Tests.Controllers
 {
     public class UsersControllerTests
     {
-        private Mock<IUserInvestmentService> _serviceMock;
-        private Mock<ILogger<UserController>> _loggerMock;
-        private UserController _controller;
+        public required Mock<IUserInvestmentService> _serviceMock;
+        public required Mock<ILogger<UserController>> _loggerMock;
+        public required UserController _controller;
 
         [OneTimeSetUp]
         public void Setup()
@@ -37,7 +37,7 @@ namespace InvestmentPerformanceAPI.Tests.Controllers
             Assert.That(result, Is.InstanceOf<OkObjectResult>());
 
             var okResult = result as OkObjectResult;
-            Assert.That(investments, Is.EqualTo(okResult.Value));
+            Assert.That(investments, Is.EqualTo(okResult?.Value));
         }
 
         [Test]

@@ -13,6 +13,7 @@ namespace InvestmentPerformanceAPI.Services
             _context = context;
         }
 
+        //gets user investments via userId
         public async Task<List<UserInvestmentDTO>?> GetUserInvestments(int userId)
         {
             _logger.LogInformation("UserInvestmentService - GetUserInvestments");
@@ -36,6 +37,7 @@ namespace InvestmentPerformanceAPI.Services
             }).ToList();
 
         }
+        //gets User Investment Details via a UserId and InvestmentId
         public async Task<InvestmentDTO?> GetUserInvestmentDetails(int userId, int investmentId)
         {
             _logger.LogInformation("UserInvestmentService - GetUserInvestmentDetails");
