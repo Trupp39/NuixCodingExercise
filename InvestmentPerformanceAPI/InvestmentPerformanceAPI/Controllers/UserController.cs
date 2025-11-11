@@ -35,10 +35,10 @@ namespace InvestmentPerformanceAPI.Controllers
         }
 
         //get endpoint exposing a users certain investment details
-        [HttpGet("{userId}/investments/{investmentId}")]
+        [HttpGet("{userId}/investment/{investmentId}")]
         public async Task<IActionResult> GetUserInvestments(int userId, int investmentId)
         {
-            _logger.LogInformation("GET: /" + userId + "/investments/" + investmentId);
+            _logger.LogInformation("GET: /" + userId + "/investment/" + investmentId);
             var investment = await _userInvestmentService.GetUserInvestmentDetails(userId, investmentId);
 
             if (investment == null)

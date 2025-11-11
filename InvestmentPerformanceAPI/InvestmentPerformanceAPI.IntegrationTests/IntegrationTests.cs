@@ -81,7 +81,7 @@ namespace InvestmentPerformanceAPI.IntegrationTests
         [Test]
         public async Task GetUserInvestmentDetails_ReturnsOk_WhenUserExists()
         {
-            var response = await _client.GetAsync("/user/1/investments/2");
+            var response = await _client.GetAsync("/user/1/investment/2");
             response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
@@ -91,7 +91,7 @@ namespace InvestmentPerformanceAPI.IntegrationTests
         [Test]
         public async Task GetUserInvestmentDetails_ReturnsNotFound_WhenUserDoesNotExist()
         {
-            var response = await _client.GetAsync("user/99/investments/2");
+            var response = await _client.GetAsync("user/99/investment/2");
             Assert.That(response.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.NotFound));
         }
     }
